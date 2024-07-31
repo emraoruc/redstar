@@ -1,0 +1,16 @@
+<h2 mat-dialog-title class="dialog-title">
+  {{ data.title }}
+  <button type="button" class="btn-close" aria-label="Close" (click)="onClose()">X</button>
+</h2>
+<mat-dialog-content>
+  <ng-container *ngIf="sanitizedHtmlContent; else componentContent">
+    <!-- HTML içeriği buraya eklenir -->
+    <div [innerHTML]="sanitizedHtmlContent"></div>
+  </ng-container>
+  <ng-template #componentContent>
+    <ng-container *ngIf="data.component">
+      <!-- Dinamik bileşeni buraya ekler -->
+      <ng-container *ngComponentOutlet="data.component"></ng-container>
+    </ng-container>
+  </ng-template>
+</mat-dialog-content>

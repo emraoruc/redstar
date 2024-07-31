@@ -1,0 +1,33 @@
+.navbar {
+    .navbar-light {
+      background-color: white; // Bootstrap primary color
+  
+      .btn {
+        &.btn-outline-light {
+          color: #ffffff;
+          border-color: #7f8c8d;
+  
+          &:hover {
+            background-color: #7f8c8d;
+            color: #007bff;
+          }
+        }
+      }
+  
+      .navbar-nav {
+        .nav-link {
+          color: #ffffff;
+  
+          &:hover {
+            color: #e0e0e0;
+          }
+        }
+      }
+  
+      img {
+        border: 2px solid #ffffff; // Optional: Border around user icon
+        padding: 2px; // Optional: Padding inside border
+      }
+    }
+  }
+  

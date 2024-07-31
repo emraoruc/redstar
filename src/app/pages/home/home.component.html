@@ -1,0 +1,148 @@
+<div class="container-fluid">
+  <div class="d-flex flex-wrap">
+    <!-- Sol Kısım: 8-grid -->
+    <div class="left-column col-lg-8 col-12">
+      <ng-container *ngFor="let box of data; let i = index">
+        <div 
+          class="box-item card" 
+          [ngClass]="{'full-width': box.type === 'exchangeRates'}" 
+          [ngSwitch]="box.type"
+        >
+          <!-- Kutucuk 1: Görsel -->
+          <div *ngSwitchCase="'image'" class="card-body" (click)="openHtmlModal()" style="cursor: pointer;">
+            <img [src]="box.imageUrl" class="card-img-top" alt="Image">
+          </div>
+
+          <!-- Kutucuk 2: İş İlanları -->
+          <div *ngSwitchCase="'jobAdvertisements'" class="card-body">
+            <div class="card-header">{{ box.title }}</div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th *ngFor="let header of box.table.headers">{{ header }}</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of box.table.rows">
+                    <td>{{ row.role }}</td>
+                    <td>{{ row.department }}</td>
+                    <td>
+                      <button (click)="openJobDetailModal(row.role, row.department, row.content)">
+                        <mat-icon>arrow_forward_ios</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Kutucuk 4: Broşürler -->
+          <div *ngSwitchCase="'brochures'" class="card-body">
+            <div class="card-header">{{ box.title }}</div>
+            <div class="card-body">
+              <button *ngFor="let button of box.buttons" class="btn btn-light mb-1 w-100 text-left">
+                {{ button.text }}
+              </button>
+            </div>
+          </div>
+
+          <!-- Kutucuk 5: Etkinlikler -->
+          <div *ngSwitchCase="'voice'" class="card-body">
+            <div class="card-header">{{ box.title }}</div>
+            <div class="card-body">
+              <button *ngFor="let event of box.events" class="btn btn-light mb-1 w-100 text-left">
+                {{ event.text }} - {{ event.date }}
+              </button>
+            </div>
+          </div>
+
+          <!-- Kutucuk 6: Örnek Dokümanlar -->
+          <div *ngSwitchCase="'sampleDocuments'" class="card-body">
+            <div class="card-header">{{ box.title }}</div>
+            <div class="card-body">
+              <a *ngFor="let link of box.links" [href]="link.url" class="d-block">
+                {{ link.text }}
+              </a>
+            </div>
+          </div>
+
+          <!-- Kutucuk 7: Döviz Kurları -->
+          <div *ngSwitchCase="'exchangeRates'" class="card-body">
+            <div class="card-header">{{ box.title }}</div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="row">
+                <!-- Döviz Kurları Tablosu -->
+              <div class="table-container col-md-8 col-xs-12">
+                <table class="table table-striped ">
+                  <thead>
+                    <tr>
+                      <th>Currency</th>
+                      <th>Buying</th>
+                      <th>Selling (₺)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let rate of box.rates">
+                      <td>{{ rate.currency }}</td>
+                      <td>₺ {{ rate.buying }}</td>
+                      <td>₺ {{ rate.selling }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <!-- Cross Rates Tablosu -->
+              <div class="table-container mt-4 mt-md-0 col-md-4 col-xs-12">
+                <table class="table table-striped ">
+                  <thead>
+                    <tr>
+                      <th>Pair</th>
+                      <th>Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let crossRate of box.crossRates">
+                      <td>{{ crossRate.pair }}</td>
+                      <td>{{ crossRate.rate }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </ng-container>
+    </div>
+
+
+    <!-- Sağ Kısım: 4-grid -->
+    <div class="d-flex flex-column col-lg-4 col-12">
+      <ng-container *ngFor="let type of ['onLeave', 'plannedLeave']">
+        <ng-container *ngFor="let box of data">
+          <div *ngIf="box.type === type">
+            <div class="card box-item mb-3">
+              <div class="card-header sticky-header">{{ box.title }}</div>
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li *ngFor="let employee of box.employees" class="d-flex align-items-start mb-3">
+                    <img [src]="employee.image" alt="Employee Image" class="img-thumbnail mr-3" style="width: 120px; height: 120px; object-fit: cover;">
+                    <div style="margin-left: 10px;">
+                      <h5 class="mb-1">{{ employee.name }}</h5>
+                      <p class="text-muted mb-1">{{ employee.position }}</p>
+                      <p class="mb-1" style="font-size: 12px; color: grey;">Start: {{ employee.startDate }} | End: {{ employee.endDate }}</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

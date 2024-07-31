@@ -1,0 +1,19 @@
+<aside class="sidebar text-white d-flex flex-column p-3">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header text-center mb-4">
+      <img src="assets/images/logo.png" alt="Logo" class="img-fluid mb-2" style="max-height: 50px; background-color: white; padding: 5px;">
+    </div>
+    
+    <!-- Navigation Links -->
+    <ul class="nav flex-column w-100">
+      <li *ngFor="let item of menuItems" class="nav-item">
+        <a class="nav-link d-flex flex-column align-items-center" 
+           [routerLink]="item.link" 
+           routerLinkActive="active">
+          <i [class]="item.icon"></i>
+          <span>{{ item.text }}</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  

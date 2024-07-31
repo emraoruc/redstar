@@ -1,0 +1,182 @@
+/* Genel Container Ayarları */
+.container-fluid {
+  padding: 0 15px;
+}
+
+/* Flexbox Düzeni İçin */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0 -15px; // Row için negatif margin
+}
+
+/* Sol Kısım: 8-grid */
+.left-column {
+  padding-right: 15px; // Column içindeki padding
+  padding-left: 15px;  // Column içindeki padding
+  flex: 0 0 66.6667%; // 8-grid
+  max-width: 66.6667%; // 8-grid
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; // Kartlar arasında boşluk
+}
+
+/* Sağ Kısım: 4-grid */
+.right-column {
+  padding-right: 15px; // Column içindeki padding
+  padding-left: 15px;  // Column içindeki padding
+  flex: 0 0 33.3333%; // 4-grid
+  max-width: 33.3333%; // 4-grid
+  display: flex;
+  flex-direction: column;
+  gap: 15px; // Kartlar arasında boşluk
+}
+
+/* Flexbox Card Düzenlemeleri */
+.box-item {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow-y: auto; // Yüksekliği aşılan içerik için kaydırma çubuğu
+  padding: 0;
+  flex: 1 0 48%; // İki kart olacak şekilde genişlik
+  box-sizing: border-box; // Padding ve border'ı genişliğe dahil et
+  margin-bottom: 15px; // Kartlar arasında alt boşluk
+
+  &.full-width {
+    flex: 0 0 100%; // Full width
+    max-width: 100%; // Full width
+  }
+}
+
+/* Eşit Yükseklik için Flexbox */
+.left-column .box-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card İçeriği */
+.card-body {
+  padding: 1.25rem; // İç boşluk
+  display: flex;
+  flex-direction: column;
+  flex: 1; // İçeriğin genişlemesini sağlar
+}
+
+.card-header {
+  color: red;
+  border: none;
+  background-color: transparent;
+  padding: 10px 10px 0;
+}
+
+/* Liste Düzenlemeleri */
+.card-body ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; // Liste işaretlerini kaldırır
+  flex: 1; // Liste öğeleri esner
+}
+
+.card-body ul li {
+  border-bottom: 1px solid #bdc3c7; // Liste öğeleri arasında çizgi
+  padding-bottom: 1rem; // Alt boşluk
+  display: flex;
+  align-items: center;
+}
+
+.card-body ul li img {
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.card-body ul li div {
+  flex: 1; // İçerik esner
+}
+
+/* Tablo Düzenlemeleri */
+.table {
+  width: 100%; // Tablo genişliğini tam yapar
+}
+
+.table thead th {
+  background-color: #f5f5f5; // Açık gri başlık arka planı
+  color: #333; // Başlık metni rengi
+}
+
+.table tbody td {
+  background-color: #e9ecef; // Hücrelerin arka planı
+  color: #333; // Hücre metni rengi
+  font-size: 14px;
+}
+
+/* Sticky Başlık */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: white; // Başlık arka plan rengi
+  color: red; // Başlık yazı rengi
+  z-index: 1; // Başlığın diğer içeriklerin üzerinde kalması için
+}
+
+/* Kaydırma Çubuğu */
+.box-item {
+  &::-webkit-scrollbar {
+    width: 3px; // Kaydırma çubuğu genişliği
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1; // Kaydırma çubuğunun arka planı
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ff0000; // Kaydırma çubuğunun rengi
+    border-radius: 5px; // Köşeleri yuvarlat
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b30000; // Üzerine gelindiğinde kaydırma çubuğunun rengi
+  }
+}
+
+/* Sol Kısım: 8-grid */
+.col-lg-8 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Sağ Kısım: 4-grid */
+.col-lg-4 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Flexbox Card Düzenlemeleri */
+.flex-item {
+  flex: 1 0 50%;
+  max-width: 50%;
+  margin-bottom: 15px; // Kartlar arasında boşluk
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Mobil ve Küçük Ekranlar İçin */
+@media (max-width: 991.98px) {
+  .left-column,
+  .right-column {
+    flex: 0 0 100%; // Tüm ekran genişliği
+    max-width: 100%; // Tüm ekran genişliği
+  }
+
+  .box-item {
+    flex: 0 0 100%; // Tüm ekran genişliği
+    max-width: 100%; // Tüm ekran genişliği
+  }
+}
+

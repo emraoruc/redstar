@@ -1,0 +1,27 @@
+[
+  {
+    "text": "Home",
+    "icon": "bi bi-house",
+    "link": "/home"
+  },
+  {
+    "text": "Operation",
+    "icon": "bi bi-gear",
+    "link": "/operation"
+  },
+  {
+    "text": "WMS",
+    "icon": "bi bi-box",
+    "link": "/wms"
+  },
+  {
+    "text": "Medical",
+    "icon": "bi bi-hexagon",
+    "link": "/medical"
+  },
+  {
+    "text": "Purchase",
+    "icon": "bi bi-cart",
+    "link": "/purchase"
+  }
+]

@@ -1,0 +1,67 @@
+.sidebar {
+    width: 150px; // Genişliği ihtiyaca göre ayarlayın
+    height: 100vh; // Sidebar'ın tam yüksekliği ekran yüksekliği kadar
+    background-color: #00274d; // Koyu lacivert arka plan rengi
+    color: #ffffff; // Beyaz yazı rengi
+    transition: width 0.3s; // Genişlik geçiş efekti
+
+    overflow: auto;
+  
+    .sidebar-header {
+      img {
+        max-height: 50px; // Logo boyutunu ayarlayın
+      }
+      h5 {
+        color: #ffffff; // Yazının beyaz olmasını sağlayın
+      }
+    }
+  
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center; // İçeriği yatayda ortalar
+      justify-content: center; // İçeriği dikeyde ortalar
+      color: white;
+      
+      padding: 10px; // İç boşluk
+      border-radius: 5px; // Yuvarlatılmış köşeler
+  
+      i {
+        font-size: 1.5rem; // İkon boyutunu ayarlayın
+      }
+  
+      &.active {
+        background-color: #001f3f; // Aktif öğe için daha koyu lacivert arka plan rengi
+        color: #ff0000; // Aktif öğe için kırmızı ikon rengi
+      }
+  
+      span {
+        font-size: 0.9rem; // Yazı boyutunu ayarlayın
+        color: white;
+      }
+    }
+  
+    .nav-item {
+      margin-bottom: 1rem; // Öğeler arasındaki boşluk
+    }
+  }
+  
+  // Dar ekranlar için stil düzenlemeleri
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 80px; // Küçültülmüş genişlik
+      overflow: hidden;
+  
+      .nav-link {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px; 
+        
+        span {
+          display: none; 
+        }
+      }
+    }
+  }
+  

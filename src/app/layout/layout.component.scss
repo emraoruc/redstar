@@ -1,0 +1,22 @@
+
+  /* Main content styling */
+  .main-content {
+    padding: 1rem; // Padding inside the main content area
+    flex: 1; // Allow it to grow and fill available space
+    background-color: #bdc3c7; // Light background color
+    overflow-y: auto; // Scroll if content overflows
+  }
+  
+  /* Footer styling */
+  .app-footer {
+    height: 60px; // Set height for footer
+    background-color: #e9ecef; // Footer background color
+    width: 100%;
+  }
+  
+  .app-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 1000; /* Diğer içeriklerin üzerinde kalması için yüksek z-index */
+  }

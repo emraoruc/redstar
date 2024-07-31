@@ -1,0 +1,40 @@
+<!--begin::App-->
+<div class="d-flex flex-column min-vh-100 app-root">
+  <!--begin::Page-->
+  <div class="d-flex flex-row flex-grow-1">
+    
+    <!--begin::Sidebar-->
+    <aside class="app-sidebar bg-dark text-white d-flex flex-column">
+      <app-sidebar></app-sidebar>
+    </aside>
+    <!--end::Sidebar-->
+    
+    <!--begin::Main content wrapper-->
+    <div class="d-flex flex-column flex-grow-1">
+      
+      <!--begin::Header (Topbar)-->
+      <header class="app-header ">
+        <app-topbar></app-topbar>
+      </header>
+      <!--end::Header-->
+
+      <!--begin::Main content area-->
+      <main class="flex-grow-1 p-4" style="background-color: #dfe6e9;">
+        <router-outlet></router-outlet>
+      </main>
+      <!--end::Main content area-->
+
+      <!--begin::Footer-->
+      <!-- Optional footer content -->
+      <!-- <footer class="app-footer bg-dark text-white">
+        <app-footer></app-footer>
+      </footer> -->
+      <!--end::Footer-->
+
+    </div>
+    <!--end::Main content wrapper-->
+    
+  </div>
+  <!--end::Page-->
+</div>
+<!--end::App-->

@@ -1,0 +1,123 @@
+[
+    {
+      "type": "image",
+      "imageUrl": "assets/images/redstar.jpg",
+      "grid": 6
+    },
+    {
+      "type": "jobAdvertisements",
+      "title": "Job Advertisements",
+      "table": {
+        "headers": ["Role", "Department"],
+        "rows": [
+          { "role": "Senior Frontend Development Specialist", "department": "Information System Department","content":"Senior Frontend Development Specialist ile ilgili içerik yazısı burada listelenecek" },
+          { "role": "Analyst", "department": "Maintenance Department","content":"Maintenance Department ile ilgili içerik yazısı burada listelenecek" }
+        ]
+      },
+      "grid": 6
+    },
+    {
+      "type": "onLeave",
+      "title": "On Leave",
+      "employees": [
+        {
+          "name": "Uğur Özcan ",
+          "position": "Informatiion Systems Department Software Development",
+          "image": "assets/images/profile1.jpg",
+          "startDate": "2024-01-01",
+          "endDate": "2024-01-15"
+        },
+        {
+            "name": "Özcan Göktuna ",
+            "position": "Maintenance Department Fixed Wing Specialist",
+            "image": "assets/images/profile2.jpg",
+            "startDate": "2024-01-01",
+            "endDate": "2024-01-15"
+          },
+          {
+            "name": "Fatma Sevilir",
+            "position": "Informatiion Systems Department Software Development",
+            "image": "assets/images/profile3.jpg",
+            "startDate": "2024-01-01",
+            "endDate": "2024-01-15"
+          }
+          
+      ],
+      "grid": 12
+    },
+    {
+      "type": "plannedLeave",
+      "title": "Planned Leave",
+      "employees": [
+        {
+            "name": "Uğur Özcan ",
+            "position": "Informatiion Systems Department Software Development",
+            "image": "assets/images/profile1.jpg",
+            "startDate": "2024-01-01",
+            "endDate": "2024-01-15"
+          },
+          {
+              "name": "Özcan Göktuna ",
+              "position": "Maintenance Department Fixed Wing Specialist",
+              "image": "assets/images/profile2.jpg",
+              "startDate": "2024-01-01",
+              "endDate": "2024-01-15"
+            },
+            {
+              "name": "Fatma Sevilir",
+              "position": "Informatiion Systems Department Software Development",
+              "image": "assets/images/profile3.jpg",
+              "startDate": "2024-01-01",
+              "endDate": "2024-01-15"
+            }
+      ],
+      "grid": 12
+    },
+    {
+      "type": "brochures",
+      "title": "Brochures",
+      "buttons": [
+        { "text": "Download Brochure 1", "url": "assets/path/to/brochure1.pdf" },
+        { "text": "Download Brochure 2", "url": "assets/path/to/brochure1.pdf" },
+        { "text": "Download Brochure 3", "url": "assets/path/to/brochure1.pdf" },
+        { "text": "Download Brochure 4", "url": "assets/path/to/brochure1.pdf" },
+        { "text": "Download Brochure 5", "url": "assets/path/to/brochure1.pdf" },
+        { "text": "Download Brochure 6", "url": "assets/path/to/brochure2.pdf" }
+      ],
+      "grid": 6
+    },
+    {
+      "type": "voice",
+      "title": "Redstar Voice",
+      "events": [
+        { "text": "Redstar Voice", "date": "April/2024" },
+        { "text": "Redstar Voice", "date": "December/2024" },
+        { "text": "Redstar Voice", "date": "July/2023" }
+      ],
+      "grid": 6
+    },
+    {
+      "type": "sampleDocuments",
+      "title": "Sample Documents",
+      "links": [
+        { "text": "click for access details to sample documents.", "url": "assets/path/to/document1.pdf" }
+      ],
+      "grid": 6
+    },
+    {
+      "type": "exchangeRates",
+      "title": "Exchange Rates",
+      "rates": [
+        { "currency": "USD", "buying": "41.1346", "selling": "41.3490" },
+        { "currency": "EUR", "buying": "44.0500", "selling": "44.2700" },
+        { "currency": "GBP", "buying": "51.9000", "selling": "52.1400" }
+      ],
+      "crossRates": [
+        { "pair": "EUR/USD", "rate": "0.90" },
+        { "pair": "GBP/USD", "rate": "1.25" }
+      ],
+      "grid": 12
+    }
+    
+  ]
+  
