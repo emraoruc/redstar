@@ -58,7 +58,7 @@
 
 /* Card İçeriği */
 .card-body {
-  padding: 1.25rem; // İç boşluk
+  padding: 0.7rem;
   display: flex;
   flex-direction: column;
   flex: 1; // İçeriğin genişlemesini sağlar
@@ -109,7 +109,7 @@
 .table tbody td {
   background-color: #e9ecef; // Hücrelerin arka planı
   color: #333; // Hücre metni rengi
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* Sticky Başlık */
@@ -180,3 +180,61 @@
   }
 }
 
+.job-arrow{
+  button{
+    margin-top:5px;
+    width: 30px;
+    height: 30px;
+    background-color: #626e87;
+    padding: 3px;
+    color: white;
+  }
+}
+.brouchures{
+  button{
+    text-align: left;
+    font-size:13px;
+  }
+}
+
+.voice{
+  .table{
+    border-spacing: 0 10px;
+    border-collapse: separate; 
+
+    tbody{
+      tr{
+        margin-bottom:5px;
+        border-bottom: none;
+        td{
+          background-color: #f9f9f9 !important;
+          border-bottom-width:inherit;
+  
+        }
+      }
+      
+    }
+  }
+}
+
+.job-table{
+  th{
+    background-color: #e7eaf2 !important;
+  }
+  td{
+    background-color: #f7f7f9 !important;
+--bs-table-bg-type: #f7f7f9 !important;
+  }
+}
+
+.right-side-row{
+  li{
+      h5{
+        font-size: 14px;
+      }
+      .text-muted{
+        font-size: 12px;
+        color:grey !important;
+      }
+  }
+}

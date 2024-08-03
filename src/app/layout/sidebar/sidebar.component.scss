@@ -1,7 +1,7 @@
 .sidebar {
     width: 150px; // Genişliği ihtiyaca göre ayarlayın
     height: 100vh; // Sidebar'ın tam yüksekliği ekran yüksekliği kadar
-    background-color: #00274d; // Koyu lacivert arka plan rengi
+    background-color: #15284e; // Koyu lacivert arka plan rengi
     color: #ffffff; // Beyaz yazı rengi
     transition: width 0.3s; // Genişlik geçiş efekti
 
@@ -28,10 +28,11 @@
   
       i {
         font-size: 1.5rem; // İkon boyutunu ayarlayın
+        margin-bottom:5px;
       }
   
       &.active {
-        background-color: #001f3f; // Aktif öğe için daha koyu lacivert arka plan rengi
+        background-color: #0a1d45; // Aktif öğe için daha koyu lacivert arka plan rengi
         color: #ff0000; // Aktif öğe için kırmızı ikon rengi
       }
   

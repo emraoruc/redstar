@@ -14,10 +14,10 @@
           </div>
 
           <!-- Kutucuk 2: İş İlanları -->
-          <div *ngSwitchCase="'jobAdvertisements'" class="card-body">
+          <div *ngSwitchCase="'jobAdvertisements'" class="card-body ">
             <div class="card-header">{{ box.title }}</div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-striped ">
                 <thead>
                   <tr>
                     <th *ngFor="let header of box.table.headers">{{ header }}</th>
@@ -28,7 +28,7 @@
                   <tr *ngFor="let row of box.table.rows">
                     <td>{{ row.role }}</td>
                     <td>{{ row.department }}</td>
-                    <td>
+                    <td class="job-arrow">
                       <button (click)="openJobDetailModal(row.role, row.department, row.content)">
                         <mat-icon>arrow_forward_ios</mat-icon>
                       </button>
@@ -42,22 +42,34 @@
           <!-- Kutucuk 4: Broşürler -->
           <div *ngSwitchCase="'brochures'" class="card-body">
             <div class="card-header">{{ box.title }}</div>
-            <div class="card-body">
+            <div class="card-body brouchures">
               <button *ngFor="let button of box.buttons" class="btn btn-light mb-1 w-100 text-left">
                 {{ button.text }}
+                <mat-icon style="float: right;font-size: 16px;margin-top:2px;">arrow_forward_ios</mat-icon>
               </button>
             </div>
           </div>
 
           <!-- Kutucuk 5: Etkinlikler -->
-          <div *ngSwitchCase="'voice'" class="card-body">
+          <div *ngSwitchCase="'voice'" class="card-body voice">
             <div class="card-header">{{ box.title }}</div>
             <div class="card-body">
-              <button *ngFor="let event of box.events" class="btn btn-light mb-1 w-100 text-left">
-                {{ event.text }} - {{ event.date }}
-              </button>
+              <table class="table">
+               
+                <tbody>
+                  <tr *ngFor="let event of box.events">
+                    <td>{{ event.text }}</td>
+                    <td>{{ event.date }}</td>
+                    <td class="text-right">
+                      <mat-icon style="font-size: 16px;margin-top:2px;">arrow_forward_ios</mat-icon>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
+          
 
           <!-- Kutucuk 6: Örnek Dokümanlar -->
           <div *ngSwitchCase="'sampleDocuments'" class="card-body">
@@ -127,14 +139,16 @@
           <div *ngIf="box.type === type">
             <div class="card box-item mb-3">
               <div class="card-header sticky-header">{{ box.title }}</div>
-              <div class="card-body">
+              <div class="card-body right-side-row">
                 <ul class="list-unstyled">
                   <li *ngFor="let employee of box.employees" class="d-flex align-items-start mb-3">
                     <img [src]="employee.image" alt="Employee Image" class="img-thumbnail mr-3" style="width: 120px; height: 120px; object-fit: cover;">
                     <div style="margin-left: 10px;">
-                      <h5 class="mb-1">{{ employee.name }}</h5>
+                      <h5 class="mb-1"><b>{{ employee.name }}</b></h5>
                       <p class="text-muted mb-1">{{ employee.position }}</p>
-                      <p class="mb-1" style="font-size: 12px; color: grey;">Start: {{ employee.startDate }} | End: {{ employee.endDate }}</p>
+                      <p class="mb-1" style="font-size: 12px;"><b>Start</b>: {{ employee.startDate }} | <b>End</b>: {{ employee.endDate }}</p>
+                      <p class="mb-1" style="font-size: 12px;"><b>Work Start</b>: {{ employee.workstart }}</p>
+
                     </div>
                   </li>
                 </ul>

@@ -6,22 +6,22 @@
   },
   {
     "text": "Operation",
-    "icon": "bi bi-gear",
+    "icon": "bi bi-airplane",
     "link": "/operation"
   },
   {
     "text": "WMS",
-    "icon": "bi bi-box",
+    "icon": "bi bi-kanban",
     "link": "/wms"
   },
   {
     "text": "Medical",
-    "icon": "bi bi-hexagon",
+    "icon": "bi bi-heart-pulse",
     "link": "/medical"
   },
   {
     "text": "Purchase",
-    "icon": "bi bi-cart",
+    "icon": "bi bi-credit-card-2-back",
     "link": "/purchase"
   }
 ]
