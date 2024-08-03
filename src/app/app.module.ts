@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { PagesModule } from './pages/pages.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { ModalModule } from './components/modal/modal.module'; // Yolu kontrol edin
+import { ModalModule } from './components/modal/modal.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Yolu kontrol edin
 
 
 
@@ -21,7 +22,8 @@ import { ModalModule } from './components/modal/modal.module'; // Yolu kontrol e
     AppRoutingModule,
     LayoutModule,
     ModalModule,
-    PagesModule
+    PagesModule,
+    BrowserAnimationsModule
     
   ],
   providers: [
