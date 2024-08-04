@@ -4,6 +4,12 @@ import { ModalService } from '../../components/modal/modal.service';
 import { DataService } from './home.service';
 
 
+export interface JobAdvertisement {
+  role: string;
+  department: string;
+  content: string;
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   image: any = {}; // Initialize with an empty object
   brochures: any[] = [];
-  jobAdvertisements: any[] = [];
+  jobAdvertisements: JobAdvertisement[] = [];
   redstarVoice: any[] = [];
   onLeave: any[] = [];
   plannedLeave: any[] = [];
