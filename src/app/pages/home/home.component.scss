@@ -69,7 +69,9 @@
   color: red;
   border: none;
   background-color: transparent;
-  padding: 10px 10px 0;
+  padding: 10px 0 0;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 /* Liste Düzenlemeleri */
@@ -81,7 +83,6 @@
 }
 
 .card-body ul li {
-  border-bottom: 1px solid #bdc3c7; // Liste öğeleri arasında çizgi
   padding-bottom: 1rem; // Alt boşluk
   display: flex;
   align-items: center;
@@ -182,9 +183,9 @@
   }
 }
 
-.job-arrow{
-  button{
-    margin-top:5px;
+.job-arrow {
+  button {
+    margin-top: 5px;
     width: 30px;
     height: 30px;
     background-color: #626e87;
@@ -192,51 +193,75 @@
     color: white;
   }
 }
-.brouchures{
-  button{
+
+.brouchures {
+  button {
     text-align: left;
-    font-size:13px;
+    font-size: 13px;
+    padding: 7px;
   }
 }
 
-.voice{
-  .table{
-    border-spacing: 0 10px;
-    border-collapse: separate; 
+.voice {
+  .table {
+    border-spacing: 0 5px;
+    border-collapse: separate;
+    margin-bottom: 0;
 
-    tbody{
-      tr{
-        margin-bottom:5px;
+    tbody {
+      tr {
         border-bottom: none;
-        td{
+        td {
           background-color: #f9f9f9 !important;
-          border-bottom-width:inherit;
-  
+          border-bottom-width: inherit;
         }
       }
-      
     }
   }
 }
 
-.job-table{
-  th{
+.job-table {
+  th {
     background-color: #e7eaf2 !important;
   }
-  td{
+  td {
     background-color: #f7f7f9 !important;
---bs-table-bg-type: #f7f7f9 !important;
+    --bs-table-bg-type: #f7f7f9 !important;
   }
 }
 
-.right-side-row{
-  li{
-      h5{
-        font-size: 14px;
-      }
-      .text-muted{
-        font-size: 12px;
-        color:grey !important;
-      }
+.right-side-row {
+  li {
+    h5 {
+      font-size: 14px;
+    }
+    .text-muted {
+      font-size: 12px;
+      color: grey !important;
+    }
   }
+}
+
+.flag {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  margin-right: 5px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+.USD.flag {
+  background-image: url('/assets/images/usd.png'); /* ABD bayrağı simgesi */
+}
+
+.EUR.flag {
+  background-image: url('/assets/images/eur.png'); /* ABD bayrağı simgesi */
+  background-color: #003399;
+}
+
+.GBP.flag {
+  background-image: url('/assets/images/gbp.png'); /* ABD bayrağı simgesi */
 }

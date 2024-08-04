@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
 import { HttpClient } from '@angular/common/http';
 import { ModalService } from '../../components/modal/modal.service';
+import { DataService } from './home.service';
+
 
 @Component({
   selector: 'app-home',
@@ -10,26 +11,31 @@ import { ModalService } from '../../components/modal/modal.service';
 })
 export class HomeComponent implements OnInit {
 
-  data: any[] = [];
-box: any;
+  image: any = {}; // Initialize with an empty object
+  brochures: any[] = [];
+  jobAdvertisements: any[] = [];
+  redstarVoice: any[] = [];
+  onLeave: any[] = [];
+  plannedLeave: any[] = [];
+  exchangeRates: any[] = [];
+  crossRates: any[] = [];
 
-  constructor(private http: HttpClient,private modalService: ModalService) { }
+  constructor(private http: HttpClient,private modalService: ModalService,private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.loadData();
+    this.dataService.getData().subscribe(data => {
+      this.image = data.image;
+      this.brochures = data.brochures;
+      this.jobAdvertisements = data.jobAdvertisements;
+      this.redstarVoice = data.redstarVoice;
+      this.onLeave = data.onLeave;
+      this.plannedLeave = data.plannedLeave;
+      this.exchangeRates = data.exchangeRates;
+      this.crossRates = data.crossRates;
+    });
   }
   
 
-  loadData(): void {
-    this.http.get<any[]>('assets/data.json').subscribe({
-      next: (response) => {
-        this.data = response;
-      },
-      error: (error) => {
-        console.error('Error loading JSON data', error);
-      }
-    });
-  }
 
   openHtmlModal() {
     this.modalService.openModal({
