@@ -1,130 +1,41 @@
-[
-    {
-      "type": "image",
-      "imageUrl": "assets/images/redstar.jpg",
-      "grid": 6
-    },
-    {
-      "type": "jobAdvertisements",
-      "title": "Job Advertisements",
-      "table": {
-        "headers": ["Role", "Department"],
-        "rows": [
-          { "role": "Senior Frontend Development Specialist", "department": "Information System Department","content":"Senior Frontend Development Specialist ile ilgili içerik yazısı burada listelenecek" },
-          { "role": "Analyst", "department": "Maintenance Department","content":"Maintenance Department ile ilgili içerik yazısı burada listelenecek" }
-        ]
-      },
-      "grid": 6
-    },
-    {
-      "type": "onLeave",
-      "title": "On Leave",
-      "employees": [
-        {
-          "name": "Uğur Özcan",
-          "position": "Informatiion Systems Department Software Development",
-          "image": "assets/images/profile1.jpg",
-          "startDate": "01/01/2024",
-          "endDate": "15/01/2024",
-          "workstart": "10/01/2024"
-        },
-        {
-          "name": "Özcan Göktuna",
-          "position": "Maintenance Department Fixed Wing Specialist",
-          "image": "assets/images/profile2.jpg",
-          "startDate": "01/01/2024",
-          "endDate": "15/01/2024",
-          "workstart": "10/01/2024"
-        },
-        {
-          "name": "Fatma Sevilir",
-          "position": "Informatiion Systems Department Software Development",
-          "image": "assets/images/profile3.jpg",
-          "startDate": "01/01/2024",
-          "endDate": "15/01/2024",
-          "workstart": "10/01/2024"
-        }
-      ],
-      "grid": 12
-    },
-    
-    {
-      "type": "plannedLeave",
-      "title": "Planned Leave List",
-      "employees": [
-        {
-          "name": "Uğur Özcan",
-          "position": "Informatiion Systems Department Software Development",
-          "image": "assets/images/profile1.jpg",
-          "startDate": "01/01/2024",
-          "endDate": "15/01/2024",
-          "workstart": "10/01/2024"
-        },
-        {
-          "name": "Özcan Göktuna",
-          "position": "Maintenance Department Fixed Wing Specialist",
-          "image": "assets/images/profile2.jpg",
-          "startDate": "01/01/2024",
-          "endDate": "15/01/2024",
-          "workstart": "10/01/2024"
-        },
-        {
-          "name": "Fatma Sevilir",
-          "position": "Informatiion Systems Department Software Development",
-          "image": "assets/images/profile3.jpg",
-          "startDate": "01/01/2024",
-          "endDate": "15/01/2024",
-          "workstart": "10/01/2024"
-        }
-      ],
-      "grid": 12
-    },
-    
-    {
-      "type": "brochures",
-      "title": "Brochures",
-      "buttons": [
-        { "text": "Air Ambulance Brochure", "url": "assets/path/to/brochure1.pdf" },
-        { "text": "Air Ambulance Brochure Challenger 605", "url": "assets/path/to/brochure1.pdf" },
-        { "text": "Air Ambulance Brochure Learjet 45 XR", "url": "assets/path/to/brochure1.pdf" },
-        { "text": "Air Taxi Brochure Challanger 605", "url": "assets/path/to/brochure1.pdf" },
-        { "text": "Air Taxi Brochure Learjet 45 XR", "url": "assets/path/to/brochure1.pdf" },
-        { "text": "Medical Escort Brochure", "url": "assets/path/to/brochure2.pdf" }
-      ],
-      "grid": 6
-    },
-    {
-      "type": "voice",
-      "title": "Redstar Voice",
-      "events": [
-        { "text": "Redstar Voice", "date": "April/2024" },
-        { "text": "Redstar Voice", "date": "December/2024" },
-        { "text": "Redstar Voice", "date": "July/2023" }
-      ],
-      "grid": 6
-    },
-    {
-      "type": "sampleDocuments",
-      "title": "Sample Documents",
-      "links": [
-        { "text": "click for access details to sample documents.", "url": "assets/path/to/document1.pdf" }
-      ],
-      "grid": 6
-    },
-    {
-      "type": "exchangeRates",
-      "title": "Exchange Rates",
-      "rates": [
-        { "currency": "USD", "buying": "41.1346", "selling": "41.3490","flagClass": "fab fa-usd" },
-        { "currency": "EUR", "buying": "44.0500", "selling": "44.2700","flagClass": "fab fa-euro-sign" },
-        { "currency": "GBP", "buying": "51.9000", "selling": "52.1400","flagClass": "us-flag" }
-      ],
-      "crossRates": [
-        { "pair": "EUR/USD", "rate": "0.90" },
-        { "pair": "GBP/USD", "rate": "1.25" }
-      ],
-      "grid": 12
-    }
-    
+{
+  "image": {
+    "url": "assets/images/redstar.jpg",
+    "grid": 6
+  },
+  "brochures": [
+    { "text": "Air Ambulance Brochure", "url": "assets/path/to/brochure1.pdf" },
+    { "text": "Air Ambulance Brochure Challenger 605", "url": "assets/path/to/brochure1.pdf" },
+    { "text": "Air Ambulance Brochure Learjet 45 XR", "url": "assets/path/to/brochure1.pdf" },
+    { "text": "Air Taxi Brochure Challenger 605", "url": "assets/path/to/brochure1.pdf" },
+    { "text": "Air Taxi Brochure Learjet 45 XR", "url": "assets/path/to/brochure1.pdf" },
+    { "text": "Medical Escort Brochure", "url": "assets/path/to/brochure2.pdf" }
+  ],
+  "jobAdvertisements": [
+    { "role": "Senior Frontend Development Specialist", "department": "Information System Department" },
+    { "role": "Analyst", "department": "Maintenance Department" }
+  ],
+  "redstarVoice": [
+    { "text": "Redstar Voice", "date": "April/2024" },
+    { "text": "Redstar Voice", "date": "December/2024" },
+    { "text": "Redstar Voice", "date": "July/2023" }
+  ],
+  "onLeave": [
+    { "name": "Uğur Özcan", "position": "Informatiion Systems Department Software Development", "image": "assets/images/profile1.jpg", "startDate": "01/01/2024", "endDate": "15/01/2024", "workstart": "10/01/2024" },
+    { "name": "Özcan Göktuna", "position": "Maintenance Department Fixed Wing Specialist", "image": "assets/images/profile2.jpg", "startDate": "01/01/2024", "endDate": "15/01/2024", "workstart": "10/01/2024" },
+    { "name": "Fatma Sevilir", "position": "Informatiion Systems Department Software Development", "image": "assets/images/profile3.jpg", "startDate": "01/01/2024", "endDate": "15/01/2024", "workstart": "10/01/2024" }
+  ],
+  "plannedLeave": [
+    { "name": "Uğur Özcan", "position": "Informatiion Systems Department Software Development", "image": "assets/images/profile1.jpg", "startDate": "01/01/2024", "endDate": "15/01/2024", "workstart": "10/01/2024" },
+    { "name": "Özcan Göktuna", "position": "Maintenance Department Fixed Wing Specialist", "image": "assets/images/profile2.jpg", "startDate": "01/01/2024", "endDate": "15/01/2024", "workstart": "10/01/2024" },
+    { "name": "Fatma Sevilir", "position": "Informatiion Systems Department Software Development", "image": "assets/images/profile3.jpg", "startDate": "01/01/2024", "endDate": "15/01/2024", "workstart": "10/01/2024" }
+  ],
+  "exchangeRates": [
+    { "currency": "USD", "buying": "41.1346", "selling": "41.3490", "flagClass": "fab fa-usd" },
+    { "currency": "EUR", "buying": "44.0500", "selling": "44.2700", "flagClass": "fab fa-euro-sign" },
+    { "currency": "GBP", "buying": "51.9000", "selling": "52.1400", "flagClass": "us-flag" }
+  ],
+  "crossRates": [
+    { "currency": "EUR", "pair": "EUR/USD", "rate": "0.90" }
   ]
-  
+}
