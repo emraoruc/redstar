@@ -167,6 +167,8 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  border:none;
+  margin-bottom: 1.6rem !important;
 }
 
 /* Mobil ve Küçük Ekranlar İçin */
@@ -265,3 +267,5 @@
 .GBP.flag {
   background-image: url('/assets/images/gbp.png'); /* ABD bayrağı simgesi */
 }
+
+
