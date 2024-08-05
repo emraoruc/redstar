@@ -12,8 +12,8 @@
     { "text": "Medical Escort Brochure", "url": "assets/path/to/brochure2.pdf" }
   ],
   "jobAdvertisements": [
-    { "role": "Senior Frontend Development Specialist", "department": "Information System Department" },
-    { "role": "Analyst", "department": "Maintenance Department" }
+    { "role": "Senior Frontend Development Specialist", "department": "Information System Department","content":"içerik 1" },
+    { "role": "Analyst", "department": "Maintenance Department","content":"içerik 2" }
   ],
   "redstarVoice": [
     { "text": "Redstar Voice", "date": "April/2024" },

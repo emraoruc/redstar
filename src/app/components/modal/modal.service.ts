@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal.component';
+import { JobDetailContentComponent } from './JobDetailContentComponent';
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +34,17 @@ export class ModalService {
         title: 'Job Advertisements', // Başlık ekleniyor
         htmlContent
       }    });
+      
 
+/*const dialogRef = this.dialog.open(JobDetailContentComponent, {
+  width: '600px',
+  height: '600px',
+  data: { 
+    role,
+    department,
+    content
+  }
+});*/
     return dialogRef.afterClosed();
   }
 
